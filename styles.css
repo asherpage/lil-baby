@@ -1,0 +1,84 @@
+@font-face {
+    font-family: benard;
+    src: url(./font/RussoOne-Regular.ttf);
+}
+*{
+    margin: 0;
+}
+html{
+    background-color: black;
+    overflow-y: hidden;
+}
+.nav{
+    position: relative;
+}
+.box1 {
+    transform: perspective(25vw) rotateX(30deg) rotateY(50deg);
+    width: 600px;
+    margin-top: 9vw;
+    font-size: 4vw;
+    margin-left: 10vw;
+    font-family: benard;
+    /* background-color: blue; */
+    color: blue;
+    transition: .2s;
+  }
+  .box1:hover{
+    transform: perspective(25vw) rotateX(30deg) rotateY(53deg);
+    transition: .2s;
+  }
+.box2{
+    transform: perspective(25vw) rotateX(12deg) rotateY(50deg);
+    width: 600px;
+    font-size: 4vw;
+    font-family: benard;
+    margin-top: -3vw;
+    margin-left: 8vw;
+    /* background-color: blueviolet; */
+    color: blueviolet;
+    transition: .2s;
+}
+.box2:hover{
+    transform: perspective(25vw) rotateX(12deg) rotateY(53deg);
+    transition: .2s;
+}
+.box3{
+    transform: perspective(25vw) rotateX(-12deg) rotateY(50deg);
+    width: 600px;
+    font-size: 4vw;
+    margin-top: -2vw;
+    margin-left: 7.5vw;
+    font-family: benard;
+    /* background-color: red; */
+    color: red;
+    transition: .2s;
+}
+.box3:hover{
+    transform: perspective(25vw) rotateX(-12deg) rotateY(53deg);
+    transition: .2s;
+}
+.box4{
+    transform: perspective(25vw) rotateX(-31deg) rotateY(50deg);
+    width: 600px;
+    font-size: 4vw;
+    margin-top: -3vw;
+    font-family: benard;
+    margin-left: 9vw;
+    /* background-color: green; */
+    color: green;
+    transition: .2s;
+}
+.box4:hover{
+    transform: perspective(25vw) rotateX(-32deg) rotateY(53deg);
+    transition: .2s;
+}
+.pp{
+    background-color: aquamarine;
+    position:fixed;
+    display: flex;
+    margin-left: 60vw;
+    width: 25vw;
+    margin-top: -27.5VW;
+    height: 25vw;
+    border-radius: 100%;
+}
