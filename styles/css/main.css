@@ -1,0 +1,203 @@
+@font-face {
+  font-family: benard;
+  src: url(../../font/RussoOne-Regular.ttf);
+}
+@font-face {
+  font-family: lalala;
+  src: url(../../font/lalala.ttf);
+}
+* {
+  margin: 0;
+}
+
+html {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: BLACK;
+}
+
+.sideOptions {
+  position: relative;
+  cursor: pointer;
+}
+
+.option1 {
+  transform: perspective(25vw) rotateX(30deg) rotateY(53deg);
+  width: 600px;
+  margin-top: 12vw;
+  font-size: 7vw;
+  margin-left: 10vw;
+  font-family: benard;
+  color: rgb(7, 152, 51);
+  transition: 0.2s;
+  text-shadow: 0px 0px 5px rgb(7, 152, 51);
+}
+.option1:hover {
+  transform: perspective(25vw) rotateX(30deg) rotateY(50deg);
+  transition: 0.5s;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 0px 0px 20px rgb(7, 152, 51);
+}
+
+.option2 {
+  transform: perspective(25vw) rotateX(12deg) rotateY(53deg);
+  width: 600px;
+  font-size: 7vw;
+  font-family: benard;
+  margin-top: -3vw;
+  margin-left: 8vw;
+  color: rgb(7, 152, 51);
+  transition: 0.2s;
+  text-shadow: 0px 0px 5px rgb(7, 152, 51);
+}
+.option2:hover {
+  transform: perspective(25vw) rotateX(12deg) rotateY(50deg);
+  transition: 0.2s;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 0px 0px 20px rgb(7, 152, 51);
+}
+
+.option3 {
+  transform: perspective(25vw) rotateX(-12deg) rotateY(53deg);
+  width: 600px;
+  font-size: 7vw;
+  margin-top: -2vw;
+  margin-left: 7.5vw;
+  font-family: benard;
+  color: rgb(7, 152, 51);
+  transition: 0.2s;
+  text-shadow: 0px 0px 5px rgb(7, 152, 51);
+}
+.option3:hover {
+  transform: perspective(25vw) rotateX(-12deg) rotateY(50deg);
+  transition: 0.2s;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 0px 0px 20px rgb(7, 152, 51);
+}
+
+.option4 {
+  transform: perspective(25vw) rotateX(-31deg) rotateY(53deg);
+  width: 600px;
+  font-size: 7vw;
+  margin-top: -3vw;
+  font-family: benard;
+  margin-left: 9vw;
+  color: rgb(7, 152, 51);
+  transition: 0.2s;
+  text-shadow: 0px 0px 5px rgb(7, 152, 51);
+}
+.option4:hover {
+  transform: perspective(25vw) rotateX(-32deg) rotateY(50deg);
+  transition: 0.2s;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #fff;
+  text-shadow: 0px 0px 20px rgb(7, 152, 51);
+}
+
+.pp {
+  position: absolute;
+  margin: 0vw 0vw 0vw 50vw;
+  width: 28vw;
+  background-image: url(../../IMG_4300.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 28vw;
+  background-color: gray;
+  border: 0.6vw solid rgb(7, 152, 51);
+  box-shadow: 0px 0px 20px rgb(7, 152, 51);
+  border-radius: 100em;
+  color: white;
+  text-align: center;
+}
+
+.name {
+  color: rgb(7, 152, 51);
+  font-size: 2vw;
+  font-family: benard;
+  font-weight: 100;
+  text-shadow: 0px 0px 0px rgb(7, 152, 51);
+  text-align: center;
+  margin: 29vw 0vw 0vw 0vw;
+}
+
+#abt-start {
+  background-color: black;
+  height: 30vw;
+  width: 50vw;
+  margin-top: 30vw;
+  margin-left: 20vw;
+  text-align: center;
+  background-clip: padding-box;
+  opacity: 0;
+  background: linear-gradient(black, black) padding-box, linear-gradient(to right, rgb(0, 146, 22), rgb(0, 123, 123)) border-box;
+  border-radius: 5em;
+  border: 6px solid transparent;
+  transition: 0.5s;
+}
+#abt-start:hover {
+  transform: perspective(70vw) rotateX(0) rotateY(30deg);
+  transition: 1s;
+}
+
+#abt-overlap {
+  background: linear-gradient(black, black) padding-box, linear-gradient(to right, rgb(0, 146, 22), rgb(0, 123, 123)) border-box;
+  border-radius: 5em;
+  border: 6px solid transparent;
+  width: 20vw;
+  height: 20vw;
+  display: flex;
+  position: absolute;
+  margin-top: -37vw;
+  margin-left: 60vw;
+  opacity: 0;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+}
+#abt-overlap:hover {
+  transform: perspective(70vw) rotateX(0) rotateY(-30deg);
+  transition: 1s;
+}
+
+.abtOne {
+  background-color: #0080FF;
+  width: 50vw;
+  margin-right: 5vw;
+  margin-top: 5vw;
+  text-align: center;
+  display: inline-block;
+  max-width: 250px;
+}
+
+.abtTwo {
+  background-color: #fff;
+  width: 25vw;
+  height: 25 vw;
+  margin-left: 5vw;
+  margin-top: 5vw;
+  text-align: center;
+  display: inline-block;
+}
+
+.mainPage {
+  background-color: black;
+  height: 15vw;
+}
+
+.abt-title {
+  font-size: 2vw;
+  color: #fff;
+  float: left;
+  margin-left: 2vw;
+  margin-top: 2vw;
+  font-family: lalala;
+}
+.abt-title span {
+  color: rgb(7, 152, 51);
+}/*# sourceMappingURL=main.css.map */
