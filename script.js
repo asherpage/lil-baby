@@ -2,10 +2,9 @@ $(window).on('load', function() {
     console.log("hello")
 })
 $(document).scroll(function() {
-           if($(window).scrollTop() > 950){
+           if($(window).scrollTop() > 910){
 
-            $("#abt-start").animate({"opacity": "1"},900).delay(2000);
-            $("#abt-start").animate({"transform": "perspective(70vw) rotateX(0) rotateY(30deg)"},900);
-            $("#abt-overlap").animate({"opacity": "1"},900);
+            $("#abt-start").css({"opacity": "1"},100);
+            $("#abt-overlap").css({"opacity": "1"},100);
            }
     });
