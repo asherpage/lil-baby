@@ -1,11 +1,11 @@
-$color_1: rgb(7, 201, 36);
-// ##0080FF
+$color_1: #bdd4e7;
+$color_2: #84acce;
 $color_2: white;
 $font-family_1: benard;
 $font-family_2: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 $background-color_1: #fff;
 $background-color_2: gray;
-$background-color_3: rgb(35, 35, 35);
+$background-color_3: rgb(18, 18, 39);
 
 @font-face {
     font-family: benard;
@@ -21,12 +21,12 @@ $background-color_3: rgb(35, 35, 35);
 }
 
 html {
-    background-color: black;
+    background-color: $background-color_3;
     overflow-x: hidden;
     
 }
 body{
-    background-color: BLACK;
+    background-color: $background-color_3;
 }
 .sideOptions {
     position: relative;
@@ -40,9 +40,9 @@ body{
     font-size: 7vw;
     margin-left: 10vw;
     font-family: $font-family_1;
-    color: $color_1;
+    color: $color_2;
     transition: .2s;
-    text-shadow: 0px 0px 5px $color_1;
+    text-shadow: 0px 0px 5px $color_2;
     &:hover {
         transform: perspective(25vw) rotateX(30deg) rotateY(50deg);
         transition: .5s;
@@ -59,9 +59,9 @@ body{
     font-family: $font-family_1;
     margin-top: -3vw;
     margin-left: 8vw;
-    color: $color_1;
+    color: $color_2;
     transition: .2s;
-    text-shadow: 0px 0px 5px $color_1;
+    text-shadow: 0px 0px 5px $color_2;
     &:hover {
         transform: perspective(25vw) rotateX(12deg) rotateY(50deg);
         transition: .2s;
@@ -78,9 +78,9 @@ body{
     margin-top: -2vw;
     margin-left: 7.5vw;
     font-family: $font-family_1;
-    color: $color_1;
+    color: $color_2;
     transition: .2s;
-    text-shadow: 0px 0px 5px $color_1;
+    text-shadow: 0px 0px 5px $color_2;
     &:hover {
         transform: perspective(25vw) rotateX(-12deg) rotateY(50deg);
         transition: .2s;
@@ -97,9 +97,9 @@ body{
     margin-top: -3vw;
     font-family: $font-family_1;
     margin-left: 9vw;
-    color: $color_1;
+    color: $color_2;
     transition: .2s;
-    text-shadow: 0px 0px 5px $color_1;
+    text-shadow: 0px 0px 5px $color_2;
     &:hover {
         transform: perspective(25vw) rotateX(-32deg) rotateY(50deg);
         transition: .2s;
@@ -112,21 +112,22 @@ body{
 .pp {
     position: absolute;
     margin: 0vw 0vw 0vw 50vw;
+    border-top: 2px solid gray;
     width: 28vw;
-    background-image: url(../../IMG_4300.jpeg);
+    background-image: url(../../nun.png);
     background-position: center;
     background-size: cover;
     height: 28vw;
     background-color: $background-color_2;
-    border: .6vw solid $color_1;
-    box-shadow: 0px 0px 20px $color_1;
+    border: .6vw solid $color_2;
+    box-shadow: 0px 0px 20px $color_2;
     border-radius: 100em;
     color: $color_2;
     text-align: center;
 }
 
 .name {
-    color: $color_1;
+    color: $color_2;
     font-size: 2vw;
     font-family: benard;
     font-weight: 100;
@@ -135,7 +136,7 @@ body{
     margin: 29vw 0vw 0vw 0vw;
 }
 #abt-start {
-    background-color: black;
+    background-color: $background-color_3;
     height: 30vw;
     width: 50vw;
     margin-top: 27vw;
@@ -143,39 +144,39 @@ body{
     text-align: center;
     background-clip: padding-box;
     opacity: 0;
-    background: linear-gradient(black, black) padding-box,
-            linear-gradient(to right, rgb(0, 255, 38), rgb(0, 235, 172)) border-box;
-        border-radius: 5em;
-        border: 6px solid transparent;
-        transition: 1s;
-                    transform: perspective(70vw) rotateX(0) rotateY(20deg);
         &:hover{
-            transform: perspective(70vw) rotateX(0) rotateY(0deg);
-            transition: 1s;
         }
 }
 #abt-overlap{
-    background: linear-gradient(black, black) padding-box,
-            linear-gradient(to right, rgb(0, 255, 38), rgb(0, 235, 172)) border-box;
-        border-radius: 5em;
-        border: 6px solid transparent;
+    background-color: aqua;
     width: 20vw;
+    border-radius: .5em;
+    background: url(../../standing.jpeg);
     height: 20vw;
     display: flex;
     position: absolute;
-    margin-top: -37vw;
-    margin-left: 60vw;
+    margin-top: -32vw;
+    margin-left: 68vw;
     opacity: 0;
     background-position: center;
     background-size: cover;
-    transition: 1s;
-            transform: perspective(70vw) rotateX(0) rotateY(-20deg);
-    &:hover {
-        transform: perspective(70vw) rotateX(0) rotateY(0deg);
-            transition: 1s;
-        }
+    &:hover{
+        
+    }
 }
-
+#abt-overlap2 {
+    background-color: $color_2;
+    width: 20vw;
+    height: 20vw;
+    border-radius: .5em;
+    display: flex;
+    position: absolute;
+    margin-top: -30vw;
+    margin-left: 70vw;
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+}
 .abtOne{
     background-color: #0080FF;
     width: 50vw;
@@ -189,24 +190,17 @@ body{
 .abtTwo{
     background-color: #fff;
     width: 25vw;
-    height: 25 vw;
+    height: 25vw;
     margin-left: 5vw;
     margin-top: 5vw;
     text-align: center;
     display: inline-block;
 }
 .mainPage{
-    background-color: black;
+    background-color: $background-color_3;
     height: 15vw;
 }
-.abt-title {
-    font-size: 2vw;
-    color: #fff;
-    float: left;
-    margin-left: 2vw;
-    margin-top: 2vw;
-    font-family: lalala;
-    span{
-        color: $color_1;
-    }
+#title-pos{
+    color: $color_1;
+    font-family: benard;
 }

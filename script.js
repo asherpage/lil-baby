@@ -4,7 +4,8 @@ $(window).on('load', function() {
 $(document).scroll(function() {
            if($(window).scrollTop() > 910){
 
-            $("#abt-start").css({"opacity": "1"},100);
-            $("#abt-overlap").css({"opacity": "1"},100);
+            $("#abt-start").css({"opacity": "1"},1000);
+            $("#abt-overlap").css({"opacity": "1"},1000);
+            $("#abt-overlap2").css({"opacity": ".5"},1000);
            }
     });
