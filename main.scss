@@ -1,36 +1,82 @@
-$color_1: #bdd4e7;
+$color_1: white;
 $color_2: #84acce;
-$color_2: white;
+$color_3: #bdd4e7;
 $font-family_1: benard;
-$font-family_2: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-$background-color_1: #fff;
+$background-color_1: rgb(18, 18, 39);
 $background-color_2: gray;
-$background-color_3: rgb(18, 18, 39);
+$background-color_3: aqua;
+$background-color_4: white;
+$background-color_5: #0080FF;
+$background-color_6: #fff;
 
 @font-face {
     font-family: benard;
     src: url(../../font/RussoOne-Regular.ttf);
 }
+
 @font-face {
     font-family: lalala;
     src: url(../../font/lalala.ttf);
 }
 
+/* Handle */
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+/*# sourceMappingURL=main.css.map */
 * {
     margin: 0;
 }
 
+// &::-webkit-scrollbar {
+//     width: 10px;
+//     background: rgb(18, 18, 39);
+// }
+
+// &::-webkit-scrollbar-thumb {
+//     background: #84acce;
+// }
+
 html {
-    background-color: $background-color_3;
+    background-color: $background-color_1;
     overflow-x: hidden;
-    
+    scroll-behavior: smooth;
 }
-body{
-    background-color: $background-color_3;
+
+body {
+    background-color: $background-color_1;
 }
+
 .sideOptions {
     position: relative;
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
 
 .option1 {
@@ -40,15 +86,16 @@ body{
     font-size: 7vw;
     margin-left: 10vw;
     font-family: $font-family_1;
-    color: gray;
-    transition: .2s;
-    text-shadow: 0px 0px 5px $color_2;
+    color: $color_1;
+    transition: 0.2s;
+    text-shadow: 0px 0px 5px white;
+
     &:hover {
         transform: perspective(25vw) rotateX(30deg) rotateY(50deg);
-        transition: .5s;
+        transition: 0.5s;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: white;
-        text-shadow: 0px 0px 20px $color_1;
+        text-shadow: 0px 0px 20px #bdd4e7;
     }
 }
 
@@ -59,15 +106,16 @@ body{
     font-family: $font-family_1;
     margin-top: -3vw;
     margin-left: 8vw;
-    color: $color_2;
-    transition: .2s;
-    text-shadow: 0px 0px 5px $color_2;
+    color: $color_1;
+    transition: 0.2s;
+    text-shadow: 0px 0px 5px white;
+
     &:hover {
         transform: perspective(25vw) rotateX(12deg) rotateY(50deg);
-        transition: .2s;
+        transition: 0.2s;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: white;
-        text-shadow: 0px 0px 20px $color_1;
+        text-shadow: 0px 0px 20px #bdd4e7;
     }
 }
 
@@ -78,15 +126,16 @@ body{
     margin-top: -2vw;
     margin-left: 7.5vw;
     font-family: $font-family_1;
-    color: $color_2;
-    transition: .2s;
-    text-shadow: 0px 0px 5px $color_2;
+    color: $color_1;
+    transition: 0.2s;
+    text-shadow: 0px 0px 5px white;
+
     &:hover {
         transform: perspective(25vw) rotateX(-12deg) rotateY(50deg);
-        transition: .2s;
+        transition: 0.2s;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: white;
-        text-shadow: 0px 0px 20px $color_1;
+        text-shadow: 0px 0px 20px #bdd4e7;
     }
 }
 
@@ -97,46 +146,60 @@ body{
     margin-top: -3vw;
     font-family: $font-family_1;
     margin-left: 9vw;
-    color: $color_2;
-    transition: .2s;
-    text-shadow: 0px 0px 5px $color_2;
+    color: $color_1;
+    transition: 0.2s;
+    text-shadow: 0px 0px 5px white;
+
     &:hover {
         transform: perspective(25vw) rotateX(-32deg) rotateY(50deg);
-        transition: .2s;
+        transition: 0.2s;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: #fff;
-        text-shadow: 0px 0px 20px $color_1;
+        text-shadow: 0px 0px 20px #bdd4e7;
     }
 }
 
 .pp {
     position: absolute;
-    margin: 0vw 0vw 0vw 50vw;
+    margin: 1vw 0vw 0vw 53vw;
     border-top: 2px solid gray;
-    width: 28vw;
-    background-image: url(../../nun.png);
+    width: 27vw;
+    background-image: url(../../new.jpeg);
     background-position: center;
     background-size: cover;
-    height: 28vw;
+    height: 27vw;
     background-color: $background-color_2;
-    border: .6vw solid $color_2;
-    box-shadow: 0px 0px 20px $color_2;
+    border: 0.6vw solid rgb(177, 177, 177);
+    box-shadow: 0px 0px 20px white;
     border-radius: 100em;
-    color: $color_2;
+    color: $color_1;
+    z-index: 1;
     text-align: center;
+    filter: grayscale(100%);
+    transform: perspective(0) rotateX(0) rotateY(0);
+    transition: 1s;
+
+    &:hover {
+        transition: 1s;
+        filter: none;
+        border: 0.6vw solid white;
+    }
 }
 
 .name {
-    color: $color_2;
+    color: $color_1;
     font-size: 2vw;
-    font-family: benard;
+    font-family: $font-family_1;
     font-weight: 100;
-    text-shadow: 0px 0px 0px $color_1;
+    text-shadow: 0px 0px 2px #bdd4e7;
     text-align: center;
-    margin: 29vw 0vw 0vw 0vw;
+    margin: 27vw 0vw 0vw 0vw;
+    backface-visibility: visible;
+    animation: flipInY 2s;
 }
+
 #abt-start {
-    background-color: $background-color_3;
+    background-color: $background-color_1;
     height: 30vw;
     width: 50vw;
     margin-top: 27vw;
@@ -144,13 +207,12 @@ body{
     text-align: center;
     background-clip: padding-box;
     opacity: 0;
-        &:hover{
-        }
 }
-#abt-overlap{
-    background-color: aqua;
+
+#abt-overlap {
+    background-color: $background-color_3;
     width: 20vw;
-    border-radius: .5em;
+    border-radius: 0.5em;
     background: url(../../standing.jpeg);
     height: 20vw;
     display: flex;
@@ -160,15 +222,13 @@ body{
     opacity: 0;
     background-position: center;
     background-size: cover;
-    &:hover{
-        
-    }
 }
+
 #abt-overlap2 {
-    background-color: $color_2;
-    width: 40vw;
+    background-color: $background-color_4;
+    width: 20vw;
     height: 20vw;
-    border-radius: .5em;
+    border-radius: 0.5em;
     display: flex;
     position: absolute;
     margin-top: -30vw;
@@ -177,18 +237,19 @@ body{
     background-position: center;
     background-size: cover;
 }
-.abtOne{
-    background-color: #0080FF;
+
+.abtOne {
+    background-color: $background-color_5;
     width: 50vw;
     margin-right: 5vw;
     margin-top: 5vw;
     text-align: center;
     display: inline-block;
     max-width: 250px;
-
 }
-.abtTwo{
-    background-color: #fff;
+
+.abtTwo {
+    background-color: $background-color_6;
     width: 25vw;
     height: 25vw;
     margin-left: 5vw;
@@ -196,11 +257,34 @@ body{
     text-align: center;
     display: inline-block;
 }
-.mainPage{
-    background-color: $background-color_3;
+
+.mainPage {
+    background-color: $background-color_1;
     height: 15vw;
 }
-#title-pos{
+
+#title-pos {
+    color: $color_2;
+    font-family: $font-family_1;
+}
+
+#subcats {
+    color: $color_3;
+}
+
+#abt-edu {
+    background-color: $background-color_1;
+    height: 30vw;
     color: $color_1;
-    font-family: benard;
+    width: 50vw;
+    margin-top: 13vw;
+    margin-left: 20vw;
+    text-align: center;
+    background-clip: padding-box;
+    opacity: 0;
+}
+
+#abtHere {
+    margin-top: 10vw;
+    position: absolute;
 }

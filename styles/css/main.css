@@ -6,6 +6,29 @@
   font-family: lalala;
   src: url(../../font/lalala.ttf);
 }
+/* Handle */
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+/*# sourceMappingURL=main.css.map */
 * {
   margin: 0;
 }
@@ -24,9 +47,11 @@ body {
   position: relative;
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
 }
+
 .option1 {
   transform: perspective(25vw) rotateX(30deg) rotateY(53deg);
   width: 600px;
@@ -105,20 +130,28 @@ a {
 
 .pp {
   position: absolute;
-  margin: 3vw 0vw 0vw 55vw;
+  margin: 1vw 0vw 0vw 53vw;
   border-top: 2px solid gray;
-  width: 23vw;
+  width: 27vw;
   background-image: url(../../new.jpeg);
   background-position: center;
   background-size: cover;
-  height: 23vw;
+  height: 27vw;
   background-color: gray;
-  border: 0.6vw solid white;
+  border: 0.6vw solid rgb(177, 177, 177);
   box-shadow: 0px 0px 20px white;
   border-radius: 100em;
   color: white;
+  z-index: 1;
   text-align: center;
+  filter: grayscale(100%);
   transform: perspective(0) rotateX(0) rotateY(0);
+  transition: 1s;
+}
+.pp:hover {
+  transition: 1s;
+  filter: none;
+  border: 0.6vw solid white;
 }
 
 .name {
@@ -128,7 +161,9 @@ a {
   font-weight: 100;
   text-shadow: 0px 0px 2px #bdd4e7;
   text-align: center;
-  margin: 22.5vw 0vw 0vw 0vw;
+  margin: 27vw 0vw 0vw 0vw;
+  backface-visibility: visible;
+  animation: flipInY 2s;
 }
 
 #abt-start {
@@ -141,6 +176,7 @@ a {
   background-clip: padding-box;
   opacity: 0;
 }
+
 #abt-overlap {
   background-color: aqua;
   width: 20vw;
@@ -155,6 +191,7 @@ a {
   background-position: center;
   background-size: cover;
 }
+
 #abt-overlap2 {
   background-color: white;
   width: 20vw;
@@ -197,10 +234,12 @@ a {
 #title-pos {
   color: #84acce;
   font-family: benard;
-}/*# sourceMappingURL=main.css.map */
-#subcats{
+}
+
+#subcats {
   color: #bdd4e7;
 }
+
 #abt-edu {
   background-color: rgb(18, 18, 39);
   height: 30vw;
@@ -212,7 +251,8 @@ a {
   background-clip: padding-box;
   opacity: 0;
 }
-#abtHere{
+
+#abtHere {
   margin-top: 10vw;
   position: absolute;
-}
+}/*# sourceMappingURL=main.css.map */
