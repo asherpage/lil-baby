@@ -260,7 +260,7 @@ a {
 
 .mainPage {
     background-color: $background-color_1;
-    height: 15vw;
+    height: 0vw;
 }
 
 #title-pos {
@@ -277,7 +277,7 @@ a {
     height: 30vw;
     color: $color_1;
     width: 50vw;
-    margin-top: 13vw;
+    margin-top: 0vw;
     margin-left: 20vw;
     text-align: center;
     background-clip: padding-box;
@@ -306,21 +306,68 @@ a {
             justify-content: center;
             align-items: center;
             flex-direction: row;
-                    :hover {
-                            box-shadow: 0px 0px 10px blue;
-                        }
-
 }
 #card{
     margin-left: 3.5vw;
     margin-right: 3.5vw;
     text-align: center;
-
+    box-shadow: 0px 0px 20px white;
+    transition: 1s;
+    :hover{
+    }
 
 }
 #sizeIt{
     height: 10vw;
 }
-#card-body{
-    background-color: #0080FF;
+#contactMe{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-family: benard;
+    margin-top: -2vw;
+}
+#setSize{
+    font-size: 1vw;
+}
+.btn-group{
+    margin: 1vw 1vw 5vw 1vw;
+}
+.rounded-circle{
+    width: 3vw;
+    height: 3vw;
+}
+#ig{
+border: none;
+margin-right: 2vw;
+box-shadow: 0px 0px 15px #d932d0;
+background: url(../../instagram.png);
+background-position: center;
+background-size: cover;
+}
+#git{
+background-color: gray;
+border: none;
+box-shadow: 0px 0px 15px #313131;
+background: url(../../social.png);
+    background-position: center;
+    background-size: cover;
+}
+#linkd{
+border: none;
+box-shadow: 0px 0px 15px #0080FF ;
+margin-left: 2vw;
+background: url(../../linkedin.png);
+    background-position: center;
+    background-size: cover;
+}
+#contact-title{
+        width: 100%;
+            text-align: center;
+            font-family: benard;
+            font-size: 4vw;
+            margin-top: 10vw;
+            color: #84acce;
+            margin-bottom: 4vw;
+            // text-shadow: 0px 0px 10px white;
 }

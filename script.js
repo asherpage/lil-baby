@@ -10,7 +10,7 @@ $(document).scroll(function() {
            }
     });
     $(document).scroll(function() {
-        if($(window).scrollTop() > 1400){
+        if($(window).scrollTop() > 1300){
 
          $("#abt-edu").animate({"opacity": "1"},2000);
         }
